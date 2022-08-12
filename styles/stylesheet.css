@@ -1,11 +1,17 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 /* Typography */
 
 :root {
+    --accent-color: #ff3400;
+    --body-color: #918ca4;
+    --heading-color: #1b0760;
     --primary-color: #2584ff;
     --secondary-color: #00d9ff;
-    --accent-color: #ff3400;
-    --heading-color: #1b0760;
-    --body-color: #918ca4;
 }
 
 html {
@@ -13,8 +19,8 @@ html {
 }
 
 body {
-    font-family: Inter, Arial, Helvetica, sans-serif;
     color: var(--body-color);
+    font-family: Inter, Arial, Helvetica, sans-serif;
     font-size: 2.4rem;
     line-height: 1.5;
 }
@@ -46,17 +52,17 @@ p {
 
 .link {
     color: var(--accent-color);
-    text-transform: uppercase;
-    text-decoration: none;
     font-size: 2rem;
     font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
 .learn-more::after {
     content: "-->";
+    font-weight: normal;
     margin-left: 5px;
     transition: margin 0.1s linear;
-    font-weight: normal;
 }
 
 .learn-more:hover::after {
@@ -90,9 +96,9 @@ p {
 /* Lists */
 
 .list {
+    color: var(--heading-color);
     list-style: none;
     padding-left: 0;
-    color: var(--heading-color);
 }
 
 .list-inline .list-item {
@@ -106,8 +112,8 @@ p {
 }
 
 .list-tick .list-item {
-    padding-left: 0.5rem;
     margin-bottom: 1rem;
+    padding-left: 0.5rem;
 }
 
 /* Icons */
@@ -122,16 +128,63 @@ p {
 }
 
 .icon-container {
+    align-items: center;
     background-color: #f3f9fa;
-    width: 64px;
-    height: 64px;
     border-radius: 50%;
     display: flex;
+    height: 64px;
     justify-content: center;
-    align-items: center;
+    width: 64px;
 }
 
 /* The rest of the icon styles will be created as i go through the project */
+
+/* Buttons */
+
+.btn {
+    background-color: white;
+    border-radius: 40px;
+    border: 2px solid var(--heading-color);
+    color: var(--heading-color);
+    cursor: pointer;
+    font-size: 1.6rem;
+    font-weight: 600;
+    outline-color: inherit;
+    padding: 0.5rem 2rem;
+    white-space: nowrap;
+    transition: background-color 0.15s linear, border-color 0.15s linear;
+}
+
+.btn:hover {
+    background-color: var(--heading-color);
+    color: white;
+}
+
+.btn-primary {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: white;
+}
+
+.btn-accent {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: white;
+}
+
+.btn-stretch {
+    width: 100%;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-accent:hover {
+    background-color: #ec3000;
+    border-color: #ec3000;
+}
 
 @media screen and (min-width: 1024px) {
     /* Typography */
