@@ -1,3 +1,5 @@
+/* Typography */
+
 :root {
     --primary-color: #2584ff;
     --secondary-color: #00d9ff;
@@ -40,6 +42,8 @@ p {
     margin-top: 0;
 }
 
+/* Links */
+
 .link {
     color: var(--accent-color);
     text-transform: uppercase;
@@ -58,6 +62,8 @@ p {
 .learn-more:hover::after {
     margin-left: 10px;
 }
+
+/* Badges */
 
 .badge {
     border-radius: 20px;
@@ -81,7 +87,32 @@ p {
     color: white;
 }
 
+/* Lists */
+
+.list {
+    list-style: none;
+    padding-left: 0;
+    color:var(--heading-color);
+}
+
+.list-inline .list-item {
+    display: inline-block;
+    margin-right: 2rem;
+}
+
+.list-tick {
+    list-style-image: url("../images/tick.svg");
+    padding-left: 3rem;
+}
+
+.list-tick .list-item {
+    padding-left: 0.5rem;
+    margin-bottom: 1rem;
+}
+
 @media screen and (min-width: 1024px) {
+    /* Typography */
+
     body {
         font-size: 1.8rem;
     }
@@ -98,9 +129,13 @@ p {
         font-size: 2.4rem;
     }
 
+    /* Links */
+
     .link {
         font-size: 1.5rem;
     }
+
+    /* Badges */
 
     .badge {
         font-size: 1.5rem;
@@ -108,5 +143,11 @@ p {
 
     .badge-small {
         font-size: 1.2rem;
+    }
+
+    /* Lists */
+
+    .list-tick .list-item {
+        padding-left: 0;
     }
 }
