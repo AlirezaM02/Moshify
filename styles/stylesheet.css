@@ -92,7 +92,7 @@ p {
 .list {
     list-style: none;
     padding-left: 0;
-    color:var(--heading-color);
+    color: var(--heading-color);
 }
 
 .list-inline .list-item {
@@ -109,6 +109,29 @@ p {
     padding-left: 0.5rem;
     margin-bottom: 1rem;
 }
+
+/* Icons */
+
+.icon {
+    width: 40px;
+    height: 40px;
+}
+
+.icon-primary {
+    fill: var(--primary-color);
+}
+
+.icon-container {
+    background-color: #f3f9fa;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* The rest of the icon styles will be created as i go through the project */
 
 @media screen and (min-width: 1024px) {
     /* Typography */
@@ -150,4 +173,6 @@ p {
     .list-tick .list-item {
         padding-left: 0;
     }
+
+    /* Icons */
 }
