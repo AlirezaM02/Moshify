@@ -5,10 +5,10 @@
 }
 
 /* Typography */
-
 :root {
     --accent-color: #ff3400;
     --body-color: #918ca4;
+    --border-color: #ccc;
     --heading-color: #1b0760;
     --primary-color: #2584ff;
     --secondary-color: #00d9ff;
@@ -49,7 +49,6 @@ p {
 }
 
 /* Links */
-
 .link {
     color: var(--accent-color);
     font-size: 2rem;
@@ -70,7 +69,6 @@ p {
 }
 
 /* Badges */
-
 .badge {
     border-radius: 20px;
     font-size: 2rem;
@@ -94,7 +92,6 @@ p {
 }
 
 /* Lists */
-
 .list {
     color: var(--heading-color);
     list-style: none;
@@ -117,7 +114,6 @@ p {
 }
 
 /* Icons */
-
 .icon {
     width: 40px;
     height: 40px;
@@ -136,11 +132,9 @@ p {
     justify-content: center;
     width: 64px;
 }
-
 /* The rest of the icon styles will be created as i go through the project */
 
 /* Buttons */
-
 .btn {
     background-color: white;
     border-radius: 40px;
@@ -195,6 +189,38 @@ p {
     border-color: #ec3000;
 }
 
+/* Inputs */
+.input {
+    border-radius: 30px;
+    border: 1px solid var(--border-color);
+    color: var(--heading-color);
+    font-size: 2rem;
+    outline: 0;
+    padding: 1.5rem 2.5rem;
+}
+
+::placeholder {
+    color: #cdcbd7;
+}
+
+/* Input Groups */
+.input-group {
+    border-radius: 30px;
+    border: 1px solid var(--border-color);
+    display: flex;
+}
+
+.input-group .input {
+    border: 0;
+    flex-grow: 1;
+    padding: 1.5rem 1rem;
+}
+
+.input-group .btn {
+    margin: 4px;
+}
+
+/* Responsiveness queries */
 @media screen and (min-width: 1024px) {
     /* Typography */
     body {
@@ -236,6 +262,11 @@ p {
 
     /* Buttons */
     .btn {
+        font-size: 1.5rem;
+    }
+
+    /* Inputs */
+    .input {
         font-size: 1.5rem;
     }
 }
