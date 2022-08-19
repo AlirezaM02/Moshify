@@ -220,6 +220,29 @@ p {
     margin: 4px;
 }
 
+.card {
+    border-radius: 7px;
+    box-shadow: 0 0 20px 10px #f3f3f3;
+    overflow: auto;
+    margin: 2rem 3rem;
+    width: 25%;
+}
+
+.card-header,
+.card-body {
+    padding: 2rem 3rem;
+}
+
+.card-primary .card-header {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.card-secondary .card-header {
+    background: var(--secondary-color);
+    color: #fff;
+}
+
 /* Responsiveness queries */
 @media screen and (min-width: 1024px) {
     /* Typography */
