@@ -73,6 +73,7 @@ p {
     border-radius: 20px;
     font-size: 2rem;
     font-weight: 600;
+    line-height: 1.5rem;
     padding: 0.5rem 2rem;
     white-space: nowrap;
 }
@@ -220,12 +221,13 @@ p {
     margin: 4px;
 }
 
+/* Cards */
 .card {
     border-radius: 7px;
     box-shadow: 0 0 20px 10px #f3f3f3;
-    overflow: auto;
+    overflow: hidden;
     margin: 2rem 3rem;
-    width: 25%;
+    width: 85%;
 }
 
 .card-header,
@@ -241,6 +243,58 @@ p {
 .card-secondary .card-header {
     background: var(--secondary-color);
     color: #fff;
+}
+
+/* Plans */
+.plan-name {
+    color: white;
+    margin: 0;
+    font-weight: 500;
+    font-size: 2.4rem;
+}
+
+.plan-price {
+    font-size: 5rem;
+}
+
+.plan-billing-cycle {
+    font-size: 2rem;
+    font-weight: 300;
+    opacity: 0.8;
+    margin-right: 1rem;
+}
+
+.plan-description {
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    display: block;
+}
+
+.plan .list-item {
+    margin-bottom: 2rem;
+}
+
+.plan-popular .card-header {
+    position: relative;
+}
+
+.card-primary .badge-primary {
+    background: #126de4;
+}
+
+.card-secondary .badge-secondary {
+    background: #02cdf1;
+}
+
+.plan-popular .card-header::before {
+    content: url(../images/popular.svg);
+    display: inline-block;
+    position: absolute;
+    right: 5%;
+    top: -6px;
+    width: 36px;
+    z-index: 1;
 }
 
 /* Responsiveness queries */
@@ -273,7 +327,7 @@ p {
     }
 
     .badge-small {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
 
     /* Lists */
@@ -291,5 +345,9 @@ p {
     /* Inputs */
     .input {
         font-size: 1.5rem;
+    }
+
+    .card {
+        width: 20%;
     }
 }
