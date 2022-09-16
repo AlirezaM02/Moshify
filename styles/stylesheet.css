@@ -296,6 +296,23 @@ p {
     width: 36px;
     z-index: 1;
 }
+/* Media */
+.media {
+    display: flex;
+    flex-direction: row;
+}
+
+.media-body {
+    margin: 0 2rem;
+}
+
+.media-body h3 {
+    margin: 0 0 1rem 0;
+}
+
+.media-icon {
+    margin-top: 1.2rem;
+}
 
 /* Responsiveness queries */
 @media screen and (min-width: 1024px) {
