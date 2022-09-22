@@ -4,10 +4,21 @@
     box-sizing: border-box;
 }
 
+/* Fonts */
+@font-face {
+    font-family: "Inter";
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url("Inter-Italic.woff2") format("woff2"),
+        url("Inter-Italic.woff") format("woff");
+}
+
 /* Typography */
 :root {
     --accent-color: #ff3400;
     --body-color: #918ca4;
+    --body-color-darker: #5c5577;
     --border-color: #ccc;
     --heading-color: #1b0760;
     --primary-color: #2584ff;
@@ -223,7 +234,7 @@ p {
 
 /* Cards */
 .card {
-    border-radius: 7px;
+    border-radius: 1.5rem;
     box-shadow: 0 0 20px 10px #f3f3f3;
     overflow: hidden;
     margin: 2rem 3rem;
@@ -303,15 +314,50 @@ p {
 }
 
 .media-body {
-    margin: 0 2rem;
+    margin: 0 2rem 1rem 1rem;
 }
 
 .media-body h3 {
-    margin: 0 0 1rem 0;
+    margin-bottom: 0;
 }
 
 .media-icon {
-    margin-top: 1.2rem;
+    margin-top: 2.5rem;
+}
+
+/* Quotes */
+
+.quote-text,
+.quote-text::before,
+.quote-text::after {
+    color: var(--body-color-darker);
+    font-size: 3rem;
+    font-style: italic;
+}
+
+.quote-text::before {
+    content: open-quote;
+}
+
+.quote-text::after {
+    content: close-quote;
+}
+
+.quote .media-title {
+    font-family: Montserrat;
+    margin-bottom: 0;
+    margin-top: 0.5rem;
+}
+
+.quote .media-body p {
+    color: var(--heading-color);
+    font-size: 2rem;
+    opacity: 0.4;
+}
+
+.quote-line {
+    position: relative;
+    bottom: 2rem;
 }
 
 /* Responsiveness queries */
@@ -366,5 +412,20 @@ p {
 
     .card {
         width: 20%;
+    }
+
+    /*Quotes*/
+    .quote-text,
+    .quote-text::before,
+    .quote-text::after {
+        font-size: 2rem;
+    }
+
+    .quote .media-title {
+        font-size: 2.4rem;
+    }
+
+    .quote-org {
+        font-size: 1.6rem;
     }
 }
